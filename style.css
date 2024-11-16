@@ -120,6 +120,23 @@ main {
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
+.winner--0 {
+  position: absolute;
+  top: 27rem;
+  left: 15rem;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.winner--1 {
+  position: absolute;
+  top: 27rem;
+  right: 16rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
 
 .btn::first-letter {
   font-size: 2.4rem;

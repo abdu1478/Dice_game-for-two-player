@@ -15,6 +15,10 @@ const currentScoreEls = [
   document.getElementById('current--0'),
   document.getElementById('current--1'),
 ];
+const winnerMessage = [
+  document.querySelector('.winner--0'),
+  document.querySelector('.winner--1'),
+];
 const diceEl = document.querySelector('.dice');
 
 let activePlayer, scores, currentScore, isGameActive;
@@ -32,6 +36,7 @@ const initGame = function () {
     player.classList.remove('player--winner', 'player--active')
   );
   playerSections[0].classList.add('player--active');
+  winnerMessage.forEach(message => message.classList.add('hidden'));
 };
 
 const switchPlayer = function () {
@@ -67,6 +72,7 @@ btnHold.addEventListener('click', () => {
       diceEl.classList.add('hidden');
       playerSections[activePlayer].classList.add('player--winner');
       playerSections[activePlayer].classList.remove('player--active');
+      winnerMessage[activePlayer].classList.remove('hidden');
     } else {
       switchPlayer();
     }
